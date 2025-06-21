@@ -40,6 +40,14 @@ public class RepresentantesActivity extends AppCompatActivity {
             // Mostrar o dialog de aviso para confirmação de exclusão
             showDeleteConfirmationDialog();
         });
+
+        // Botão Voltar
+        ImageView voltarButton = findViewById(R.id.lista_voltar);
+        voltarButton.setOnClickListener(v -> {
+            Intent intent = new Intent(RepresentantesActivity.this, MenuAdminActivity.class);  // Corrigido para a atividade correta
+            startActivity(intent);
+            finish();
+        });
     }
 
     private void showDeleteConfirmationDialog() {

@@ -14,13 +14,13 @@
         android:gravity="center_vertical"
         android:layout_marginBottom="16dp">
 
+        <!-- Botão Voltar -->
         <ImageView
-            android:id="@+id/iv_back"
+            android:id="@+id/lista_voltar"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_arrow_back"
-            android:contentDescription="@string/back"
-            android:layout_marginEnd="16dp"/>
+            android:src="@drawable/lista_voltar"
+            android:layout_marginEnd="8dp"/>
 
         <TextView
             android:id="@+id/tv_title"

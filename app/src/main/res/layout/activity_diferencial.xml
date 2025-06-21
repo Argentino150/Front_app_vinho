@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:id="@+id/layout_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <!-- Banner Topo -->
+        <ImageView
+            android:id="@+id/img_banner"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/diferencial_banner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#800000"
+            android:padding="16dp">
+
+            <!-- Botão Voltar -->
+            <ImageView
+                android:id="@+id/lista_voltar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/lista_voltar"
+                android:layout_marginEnd="8dp"/>
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Logo Salut"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nosso diferencial"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_diferencial1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#272727"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="start" />
+
+            <!-- Linha Separadora -->
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="#800000"
+                android:layout_gravity="start"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Bloco de texto -->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_diferencial1"
+                android:textSize="16sp"
+                android:textColor="#272727"
+                android:background="#ECECEC"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="textStart"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_diferencial2"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#272727"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="start" />
+
+        <!-- Linha Separadora -->
+        <View
+            android:layout_width="150dp"
+            android:layout_height="2dp"
+            android:background="#800000"
+            android:layout_gravity="start"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Bloco de texto -->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_diferencial2"
+            android:textSize="16sp"
+            android:textColor="#272727"
+            android:background="#ECECEC"
+            android:padding="12dp"
+            android:layout_marginTop="4dp"
+            android:textAlignment="textStart"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_diferencial3"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#272727"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="start" />
+
+            <!-- Linha Separadora -->
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="#800000"
+                android:layout_gravity="start"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Bloco de texto -->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_diferencial3"
+                android:textSize="16sp"
+                android:textColor="#272727"
+                android:background="#ECECEC"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="textStart"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_diferencial4"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#272727"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="start" />
+
+            <!-- Linha Separadora -->
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="#800000"
+                android:layout_gravity="start"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Bloco de texto -->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_diferencial4"
+                android:textSize="16sp"
+                android:textColor="#272727"
+                android:background="#ECECEC"
+                android:padding="12dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="textStart"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salut: brindando histórias e momentos inesquecíveis."
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="#800000"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desde 1998"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</ScrollView>

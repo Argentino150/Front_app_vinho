@@ -1,12 +1,12 @@
 package com.example.projeto_interdiciplinar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
@@ -18,6 +18,7 @@ public class PedidosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listar_pedidos);  // Aponte para o seu layout de listar pedidos
 
+
         // Botão para adicionar pedido
         Button btnAdicionarPedido = findViewById(R.id.btn_adicionar_pedido);
         btnAdicionarPedido.setOnClickListener(v -> {
@@ -26,7 +27,7 @@ public class PedidosActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Exemplo de ícones de editar e excluir (com base no layout da imagem)
+        // Exemplo de ícones de editar e excluir
         ImageView ivEditar = findViewById(R.id.iv_editar_1);
         ImageView ivExcluir = findViewById(R.id.iv_excluir_1);
 
@@ -40,6 +41,7 @@ public class PedidosActivity extends AppCompatActivity {
             // Mostrar o dialog de aviso para confirmação de exclusão
             showDeleteConfirmationDialog();
         });
+
     }
 
     private void showDeleteConfirmationDialog() {
@@ -67,7 +69,7 @@ public class PedidosActivity extends AppCompatActivity {
         // Botão de continuar - ação de exclusão
         btnContinuar.setOnClickListener(v -> {
             // Lógica de exclusão
-            Toast.makeText(PedidosActivity.this, "Vinho excluído com sucesso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PedidosActivity.this, "Pedido excluído com sucesso!", Toast.LENGTH_SHORT).show();
             // Fechar o dialog após a confirmação
             dialog.dismiss();
         });

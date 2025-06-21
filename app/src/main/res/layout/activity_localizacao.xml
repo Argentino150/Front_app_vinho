@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:id="@+id/layout_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#800000"
+            android:padding="16dp">
+
+            <!-- Botão Voltar -->
+            <ImageView
+                android:id="@+id/lista_voltar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/lista_voltar"
+                android:layout_marginEnd="8dp"/>
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo"
+                android:contentDescription="Logo Salut"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onde estamos localizados"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_localizacao"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#272727"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="start" />
+
+            <!-- Linha Separadora -->
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="#800000"
+                android:layout_gravity="start"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Bloco de texto -->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_localizacao1"
+                android:textSize="16sp"
+                android:textColor="#272727"
+                android:background="#ECECEC"
+                android:padding="12dp"
+                android:textAlignment="textStart"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_localizacao2"
+                android:textSize="16sp"
+                android:textColor="#272727"
+                android:background="#ECECEC"
+                android:padding="12dp"
+                android:textAlignment="textStart"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Venha nos visitar e brindar com a gente!"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:background="#ECECEC"
+                android:padding="12dp"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="2dp"
+            android:background="#800000"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:id="@+id/img_banner"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/localizacao_banner" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

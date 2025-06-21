@@ -79,11 +79,13 @@
             android:text="@string/label_tipo"
             android:textColor="@color/black"
             android:textSize="14sp" />
-        <Spinner
-            android:id="@+id/spinner_tipo"
+        <EditText
+            android:id="@+id/et_tipo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/label_tipo"
             android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
             android:layout_marginBottom="12dp" />
 
         <TextView

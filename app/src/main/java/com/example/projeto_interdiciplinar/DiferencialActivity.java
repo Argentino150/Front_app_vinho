@@ -6,24 +6,18 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MetasComissoesActivity extends AppCompatActivity {
+public class DiferencialActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_metas_comissoes);
+        setContentView(R.layout.activity_diferencial);
 
-        // Botão Voltar
         ImageView voltarButton = findViewById(R.id.lista_voltar);
         voltarButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MetasComissoesActivity.this, MenuRepresentanteActivity.class);  // Corrigido para a atividade correta
+            Intent intent = new Intent(DiferencialActivity.this, SobreNosActivity.class);  // Corrigido para a atividade correta
             startActivity(intent);
             finish();
         });
 
-
-
     }
-
-
 }
-

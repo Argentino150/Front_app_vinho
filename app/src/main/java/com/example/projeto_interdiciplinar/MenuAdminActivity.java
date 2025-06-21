@@ -46,7 +46,7 @@ public class MenuAdminActivity extends AppCompatActivity {
 
         // Ação do botão "Sair"
         btnSair.setOnClickListener(v -> {
-            finishAffinity();  // Finaliza todas as atividades e sai do aplicativo
+            startActivity(new Intent(this, Menuinicial.class));  // Altere para a Activity correta
         });
     }
 }

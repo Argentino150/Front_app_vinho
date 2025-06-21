@@ -44,6 +44,16 @@
         <activity android:name=".CadastroPedidoitemActivity" android:exported="false"/>
         <activity android:name=".CadastroVisitaActivity" android:exported="false"/>
         <activity android:name=".Resumopedido" android:exported="false"/>
+        <activity android:name=".SobreNosActivity" android:exported="false"/>
+        <activity android:name=".DiferencialActivity" android:exported="false"/>
+        <activity android:name=".LocalizacaoActivity" android:exported="false"/>
+        <activity android:name=".MissaoVisaoActivity" android:exported="false"/>
+        <activity android:name=".NossaHistoriaActivity" android:exported="false"/>
+
+
+
+
+
 
     </application>
 

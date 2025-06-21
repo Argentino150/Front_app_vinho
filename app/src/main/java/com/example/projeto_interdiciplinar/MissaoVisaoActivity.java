@@ -5,25 +5,24 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.Arrays;
+import java.util.List;
 
-public class MetasComissoesActivity extends AppCompatActivity {
+public class MissaoVisaoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_metas_comissoes);
+        setContentView(R.layout.activity_missao);
 
-        // Botão Voltar
         ImageView voltarButton = findViewById(R.id.lista_voltar);
         voltarButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MetasComissoesActivity.this, MenuRepresentanteActivity.class);  // Corrigido para a atividade correta
+            Intent intent = new Intent(MissaoVisaoActivity.this, SobreNosActivity.class);  // Corrigido para a atividade correta
             startActivity(intent);
             finish();
         });
 
 
-
     }
-
-
 }
-

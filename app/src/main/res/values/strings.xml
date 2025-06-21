@@ -147,4 +147,52 @@
     <string name="data">Data</string>
     <string name="horario">Horário</string>
 
+    <string name="frase_impacto_historia">Cada garrafa conta uma história. A nossa começa aqui.</string>
+
+    <string name="texto_nossa_historia">Fundada com paixão no coração da Serra Gaúcha, a Vinícola Salut nasceu do sonho de uma família apaixonada por vinhos e pelo cultivo da uva.
+
+Desde os primeiros parreirais até as modernas instalações de hoje, cada etapa da nossa trajetória foi marcada pela dedicação à qualidade e ao respeito às tradições vitivinícolas da região.
+
+Ao longo dos anos, combinamos técnicas tradicionais com inovações tecnológicas para criar vinhos que expressam o melhor do nosso terroir.
+
+Nossa missão sempre foi oferecer experiências únicas aos nossos clientes, levando a essência da nossa terra em cada garrafa.
+
+Hoje, com orgulho, seguimos crescendo e conquistando apreciadores de vinho em todo o Brasil.</string>
+
+    <string name="texto_missao">Oferecer experiências únicas e inesquecíveis por meio de vinhos que expressam a essência da nossa terra, com qualidade, tradição e inovação.</string>
+    <string name="texto_visao">Ser reconhecida como uma das principais vinícolas do Brasil, referência em qualidade, sustentabilidade e relacionamento com o cliente.</string>
+
+
+    <string name="frase_impacto_diferencial">"Mais que vinhos, experiências que marcam momentos."</string>
+    <string name="titulo_diferencial1">Inovação que aproxima</string>
+    <string name="titulo_diferencial2">Tradição e tecnologia</string>
+    <string name="titulo_diferencial3">Sustentabilidade Ambiental</string>
+    <string name="titulo_diferencial4">Atendimento Personalizado</string>
+    <string name="texto_diferencial1">Buscamos proporcionar uma experiência de compra ágil, personalizada e que
+        fortalece nossa relação com cada cliente e parceiro.</string>
+    <string name="texto_diferencial2">Acreditamos na união perfeita entre tradição e inovação. Mantemos técnicas artesanais, aprimoradas com tecnologias modernas, para criar vinhos que respeitam nosso legado e ao mesmo tempo são otimizados para os desafios do futuro. Cada garrafa é resultado da nossa paixão pela
+        vitivinicultura e da busca constante por qualidade e eficiência</string>
+    <string name="texto_diferencial3">Buscamos implementar práticas sustentáveis em todas as etapas da produção, desde o cultivo das uvas
+        até o processo de engarrafamento, para preservar o meio ambiente e garantir um futuro mais verde para as próximas gerações.</string>
+    <string name="texto_diferencial4">Nosso atendimento vai além de uma simples venda. Criamos experiências exclusivas para nossos clientes, oferecendo consultoria
+        personalizada e atendimento ágil, sempre focado em suas necessidades</string>
+    <string name="texto_diferencial5">Paixão pela vitivinicultura: "Vivemos o vinho em cada detalhe, do cultivo à taça."</string>
+
+    <string name="titulo_localizacao">Nossa localização</string>
+    <string name="texto_localizacao1">A Vinícola Salut está localizada na charmosa cidade de São Joaquim, na Serra Catarinense, uma das
+        regiões mais tradicionais do Brasil na produção de vinhos de altitude.</string>
+    <string name="texto_localizacao2">Vinícola Salut, Rodovia SC-114, Km 25 – Bairro Santa Luzia, São Joaquim – SC, CEP 88650-000</string>
+
+
+
+
+    <string name="texto_terroir">Nossos vinhos refletem o solo e o clima únicos da Serra Gaúcha.</string>
+    <string name="texto_artesanal">Cada garrafa é feita com cuidado, mantendo o sabor original das uvas.</string>
+    <string name="texto_premiacao">Certificados e prêmios nacionais que atestam nossa qualidade.</string>
+    <string name="texto_atendimento">Experiência única, com foco na satisfação de cada cliente.</string>
+
+
+
+
+
 </resources>

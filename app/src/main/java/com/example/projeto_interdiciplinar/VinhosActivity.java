@@ -1,6 +1,7 @@
 package com.example.projeto_interdiciplinar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -81,3 +82,4 @@ public class VinhosActivity extends AppCompatActivity {
         dialog.show();
     }
 }
+
