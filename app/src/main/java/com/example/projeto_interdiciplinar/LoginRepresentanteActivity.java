@@ -20,6 +20,8 @@ public class LoginRepresentanteActivity extends AppCompatActivity {
         EditText edtSenha = findViewById(R.id.edtSenha);
         Button btnEntrar = findViewById(R.id.btnEntrar);
         TextView txtEsqueciSenha = findViewById(R.id.txtEsqueciSenha);
+        Button btnSair = findViewById(R.id.btnSair);
+
 
 
         btnEntrar.setOnClickListener(v -> {
@@ -41,5 +43,11 @@ public class LoginRepresentanteActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
+        btnSair.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginRepresentanteActivity.this, Menuinicial.class);
+            startActivity(intent);
+        });
+
     }
 }

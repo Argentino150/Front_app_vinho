@@ -76,5 +76,14 @@
             android:textColor="@color/primaryColor"
             android:textSize="14sp" />
 
+        <android.widget.Button
+            android:id="@+id/btnSair"
+            style="@style/SecondaryButton"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/sair"
+            android:layout_gravity="center"/>
+
     </LinearLayout>
 </ScrollView>

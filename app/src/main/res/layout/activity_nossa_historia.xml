@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/secondaryColor"
+            android:background="@color/Vinho"
             android:padding="0dp">
 
         <!-- Título Liderança -->
@@ -107,7 +107,7 @@
             android:text="Liderança"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#272727"
+            android:textColor="@color/lightGray"
             android:layout_marginTop="16dp"
             android:gravity="center" />
 
@@ -127,7 +127,7 @@
             android:text="Ana Costa"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#800000"
+            android:textColor="@color/lightGray"
             android:gravity="center"
             android:layout_marginTop="8dp" />
 
@@ -136,8 +136,9 @@
             android:layout_height="wrap_content"
             android:text="Fundadora e Diretora Executiva"
             android:textSize="14sp"
-            android:textColor="#272727"
+            android:textColor="#C7C7C7"
             android:gravity="center"
+            android:textStyle="bold"
             android:layout_marginBottom="25dp" />
 
         <!-- Líder 2 -->
@@ -155,7 +156,7 @@
             android:text="Carlos Almeida"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#800000"
+            android:textColor="@color/lightGray"
             android:gravity="center"
             android:layout_marginTop="8dp" />
 
@@ -164,8 +165,10 @@
             android:layout_height="wrap_content"
             android:text="Enólogo Chefe"
             android:textSize="14sp"
-            android:textColor="#272727"
+            android:textColor="#C7C7C7"
             android:gravity="center"
+            android:textStyle="bold"
+
             android:layout_marginBottom="16dp" />
         </LinearLayout>
 

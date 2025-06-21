@@ -75,7 +75,7 @@ public class ClientesActivity extends AppCompatActivity {
         // Botão de continuar - ação de exclusão
         btnContinuar.setOnClickListener(v -> {
             // Lógica de exclusão
-            Toast.makeText(ClientesActivity.this, "Vinho excluído com sucesso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ClientesActivity.this, "Cliente excluído com sucesso!", Toast.LENGTH_SHORT).show();
             // Fechar o dialog após a confirmação
             dialog.dismiss();
         });

@@ -19,7 +19,9 @@ public class LoginAdminActivity extends AppCompatActivity {
         EditText edtUsuario = findViewById(R.id.edtUsuario);
         EditText edtSenha = findViewById(R.id.edtSenha);
         Button btnEntrar = findViewById(R.id.btnEntrar);
+        Button btnSair = findViewById(R.id.btnSair);
         TextView txtEsqueciSenha = findViewById(R.id.txtEsqueciSenha);
+
 
         btnEntrar.setOnClickListener(v -> {
             String usuario = edtUsuario.getText().toString().trim();
@@ -40,5 +42,12 @@ public class LoginAdminActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
+        btnSair.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginAdminActivity.this, Menuinicial.class);
+            startActivity(intent);
+        });
+
+
     }
 }
