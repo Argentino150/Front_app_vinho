@@ -25,6 +25,13 @@ public class VinhosActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        ImageView voltarButton = findViewById(R.id.lista_voltar);
+        voltarButton.setOnClickListener(v -> {
+            Intent intent = new Intent(VinhosActivity.this, MenuRepresentanteActivity.class);  // Corrigido para a atividade correta
+            startActivity(intent);
+            finish();
+        });
+
         // Exemplo de ícone de editar e excluir (com base no layout da imagem)
         ImageView ivEditar = findViewById(R.id.iv_editar_1);
         ImageView ivExcluir = findViewById(R.id.iv_excluir_1);

@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_principal"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:src="@drawable/logo1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:text="@string/esqueci_senha_titulo"
+            android:textSize="28sp"
+            android:textColor="#7F0000"
+            android:layout_marginBottom="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:text="@string/entre_em_contato"
+            android:textSize="22sp"
+            android:textColor="#262626"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            />
+
+        <android.widget.Button
+            android:id="@+id/btnVoltaLogin"
+            style="@style/ActionButton"
+            android:layout_width="239dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:text="@string/volta_login" />
+
+
+
+    </LinearLayout>
+</ScrollView>

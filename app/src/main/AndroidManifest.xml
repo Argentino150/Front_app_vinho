@@ -49,6 +49,7 @@
         <activity android:name=".LocalizacaoActivity" android:exported="false"/>
         <activity android:name=".MissaoVisaoActivity" android:exported="false"/>
         <activity android:name=".NossaHistoriaActivity" android:exported="false"/>
+        <activity android:name=".EsqueciSenhaActivity" android:exported="false"/>
 
 
 

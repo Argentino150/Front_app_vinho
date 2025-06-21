@@ -2,13 +2,14 @@
 <resources>
 
     <!-- Nome do App -->
-    <string name="app_name">Projeto_interdiciplinar</string>
+    <string name="app_name">Salut</string>
 
     <!-- Botões Gerais -->
     <string name="entrar">Entrar</string>
     <string name="registrar">Registrar</string>
     <string name="sair">sair</string>
     <string name="back">Voltar</string>
+    <string name="volta_login">Voltar ao login</string>
     <string name="proximo">Próximo</string>
     <string name="cancelar">Cancelar</string>
     <string name="salvar">Salvar</string>
@@ -18,6 +19,13 @@
     <string name="ver_resumo_pedido">Ver resumo do pedido</string>
     <string name="adicionar_imagem">Adicionar imagem</string>
     <string name="login_falhou">Login falhou.</string>
+
+
+    <!-- Tela esqueci a senha -->
+    <string name="entre_em_contato">Entre em contato com o nosso suporte técnico da Vinícola Salut para recuperar o
+        acesso à sua conta. Estamos prontos para ajudar você a brindar sem preocupações!</string>
+
+    <string name="esqueci_senha_titulo">Esqueceu sua senha?</string>
 
 
     <!-- Campos Comuns -->
@@ -67,11 +75,11 @@
     <string name="clientes">Clientes</string>
     <string name="representantes">Representantes</string>
     <string name="pedidos">Pedidos</string>
-    <string name="relatorios">Reletorios</string>
+    <string name="relatorios">Relatórios</string>
 
 
     <!-- Representantes -->
-    <string name="adicionando_representante">+ representante</string>
+    <string name="adicionando_representante">+ Representante</string>
     <string name="buscar_representante">Buscar representante</string>
     <string name="representante">Representante</string>
     <string name="entrar_representante">Entrar como representante</string>

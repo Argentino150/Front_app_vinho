@@ -66,14 +66,6 @@
             android:layout_marginTop="30dp"
             android:text="@string/entrar" />
 
-        <!-- Botão Registrar -->
-        <android.widget.Button
-            android:id="@+id/btnRegistrar"
-            style="@style/ActionButton"
-            android:layout_width="237dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
-            android:text="@string/registrar" />
 
         <TextView
             android:id="@+id/txtEsqueciSenha"

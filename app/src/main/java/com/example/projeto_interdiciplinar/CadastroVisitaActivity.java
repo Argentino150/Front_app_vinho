@@ -11,7 +11,7 @@ public class CadastroVisitaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nova_visita);
 
-        Button btnvoltar = findViewById(R.id.btn_voltar);
+        Button btnvoltar = findViewById(R.id.btn_cancel);
 
         // Ação do botão "Voltar"
         btnvoltar.setOnClickListener(v -> {
