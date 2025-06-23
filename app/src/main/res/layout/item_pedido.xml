@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_id_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedido #123"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_nome_cliente_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente: João da Silva"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_data_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data: 22/06/2025"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/tv_valor_total_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 259,90"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/primaryColor"/>
+
+        <TextView
+            android:id="@+id/tv_status_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="PENDENTE"
+            android:textStyle="italic"
+            android:textColor="@android:color/holo_orange_dark"/>
+    </LinearLayout>
+</LinearLayout>

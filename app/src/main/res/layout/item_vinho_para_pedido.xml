@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/iv_imagem_vinho"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:src="@drawable/imagem"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/tv_nome_vinho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vinho Francês Tinto"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_preco_vinho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 159,90"
+            android:textColor="@color/primaryColor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qtd."
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/et_quantidade"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="center"
+            android:text="0"
+            android:selectAllOnFocus="true"
+            android:background="@drawable/edit_text_bg"/>
+    </LinearLayout>
+</LinearLayout>

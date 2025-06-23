@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
     android:padding="16dp">
 
-    <!-- Barra de busca -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp"
         android:gravity="center_vertical">
-
-        <!-- Botão Voltar -->
         <ImageView
             android:id="@+id/lista_voltar"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/lista_voltar"
             android:layout_marginEnd="8dp"/>
-
         <EditText
             android:id="@+id/et_busca_representante"
             android:layout_width="0dp"
@@ -30,141 +26,36 @@
             android:hint="@string/buscar_representante"
             android:background="@drawable/edit_text_bg"
             android:padding="8dp"/>
-
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/logo2"/>
     </LinearLayout>
 
-    <!-- Botão adicionar representante -->
     <android.widget.Button
         android:id="@+id/btn_adicionar_representante"
         style="@style/ActionButton"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginVertical="8dp"
+        android:paddingHorizontal="16dp"
         android:text="@string/adicionando_representante" />
 
-    <!-- Lista de representantes -->
-    <LinearLayout
-        android:id="@+id/list_representante"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:divider="@color/lightGray"
-        android:dividerHeight="1dp">
-
-        <!-- Item de Representante 1 -->
-        <LinearLayout
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_representantes"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        <ProgressBar
+            android:id="@+id/progress_bar_representantes"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            android:padding="8dp">
-
-            <!-- Detalhes do Representante -->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_nome_representante_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Representante X"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/tv_status_representante_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Status: Ativo"
-                    android:textColor="@color/green"/> <!-- Cor para ativo -->
-
-            </LinearLayout>
-
-            <!-- Ações de editar e excluir -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/iv_editar_1"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/editar"
-                    android:layout_marginEnd="8dp"/>
-
-                <ImageView
-                    android:id="@+id/iv_excluir_1"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/excluir"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Item de Representante 2 (Inativo) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            android:padding="8dp">
-
-            <!-- Detalhes do Representante -->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_nome_representante_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Representante Y"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/tv_status_representante_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Status: Inativo"
-                    android:textColor="@color/primaryColor"/> <!-- Cor para inativo -->
-
-            </LinearLayout>
-
-            <!-- Ações de editar e excluir -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/iv_editar_2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/editar"
-                    android:layout_marginEnd="8dp"/>
-
-                <ImageView
-                    android:id="@+id/iv_excluir_2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/excluir"/>
-            </LinearLayout>
-        </LinearLayout>
-
-    </LinearLayout>
-
+            android:layout_gravity="center"
+            android:visibility="visible"/>
+    </FrameLayout>
 </LinearLayout>
