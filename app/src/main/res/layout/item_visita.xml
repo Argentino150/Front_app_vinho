@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_nome_cliente_visita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente: Nome do Cliente"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_data_hora_visita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data: 25/06/2025 às 14:30"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_status_visita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: AGENDADA"
+            android:textStyle="italic"
+            android:textColor="@color/primaryColor"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_excluir_visita"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/excluir"
+        android:layout_marginStart="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+</LinearLayout>

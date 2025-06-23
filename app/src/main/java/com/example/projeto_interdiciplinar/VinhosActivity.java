@@ -61,10 +61,9 @@ public class VinhosActivity extends AppCompatActivity implements VinhosAdapter.O
             Intent intent = new Intent(VinhosActivity.this, CadastroVinhoActivity.class);
             startActivity(intent);
         });
+        // AQUI ESTÁ A CORREÇÃO:
         findViewById(R.id.lista_voltar).setOnClickListener(v -> {
-            Intent intent = new Intent(VinhosActivity.this, MenuRepresentanteActivity.class);
-            startActivity(intent);
-            finish();
+            finish(); // Simplesmente fecha a tela atual e volta para a anterior
         });
     }
 

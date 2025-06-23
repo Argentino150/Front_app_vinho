@@ -51,11 +51,10 @@ public class PedidosActivity extends AppCompatActivity {
         recyclerView.setAdapter(pedidosAdapter);
     }
 
+    // O MÉTODO COM A CORREÇÃO ESTÁ AQUI
     private void setupListeners() {
         findViewById(R.id.lista_voltar).setOnClickListener(v -> {
-            Intent intent = new Intent(PedidosActivity.this, MenuRepresentanteActivity.class);
-            startActivity(intent);
-            finish();
+            finish(); // CORRIGIDO: Apenas fecha a tela atual
         });
         findViewById(R.id.btn_adicionar_pedido).setOnClickListener(v -> {
             Intent intent = new Intent(PedidosActivity.this, CadastroPedidoActivity.class);

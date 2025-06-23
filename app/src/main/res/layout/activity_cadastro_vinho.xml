@@ -118,14 +118,23 @@
             android:padding="12dp"
             android:layout_marginBottom="24dp" />
 
-        <android.widget.Button
-            android:id="@+id/btn_adicionar_imagem"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL da Imagem"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/et_imagem_url"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/adicionar_imagem"
-            android:drawablePadding="8dp"
-            style="@style/ActionButton"
-            android:layout_marginBottom="8dp" />
+            android:hint="https://exemplo.com/imagem.jpg"
+            android:inputType="textUri"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"/>
 
         <android.widget.Button
             android:id="@+id/btn_salvar"

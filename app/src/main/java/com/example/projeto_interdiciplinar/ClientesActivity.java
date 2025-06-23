@@ -55,11 +55,11 @@ public class ClientesActivity extends AppCompatActivity implements ClientesAdapt
     }
 
     private void setupListeners() {
+        // CORREÇÃO APLICADA AQUI
         findViewById(R.id.lista_voltar).setOnClickListener(v -> {
-            Intent intent = new Intent(ClientesActivity.this, MenuRepresentanteActivity.class);
-            startActivity(intent);
-            finish();
+            finish(); // Apenas fecha a tela atual
         });
+
         findViewById(R.id.btn_adicionar_cliente).setOnClickListener(v -> {
             Intent intent = new Intent(ClientesActivity.this, CadastroClienteActivity.class);
             startActivity(intent);
@@ -67,7 +67,6 @@ public class ClientesActivity extends AppCompatActivity implements ClientesAdapt
     }
 
     private void fetchClientes() {
-        //... (o método fetchClientes continua exatamente o mesmo)
         progressBar.setVisibility(View.VISIBLE);
         recyclerView.setVisibility(View.GONE);
         ApiClient.getApiService().getClientes().enqueue(new Callback<ClientePage>() {
@@ -93,22 +92,17 @@ public class ClientesActivity extends AppCompatActivity implements ClientesAdapt
 
     @Override
     public void onEditClick(Cliente cliente) {
-        // --- AQUI A MUDANÇA ---
-        // Abrir a tela de edição, passando o objeto Cliente
         Intent intent = new Intent(ClientesActivity.this, EditarClienteActivity.class);
-        // "CLIENTE_PARA_EDITAR" é uma chave única para identificar o dado
         intent.putExtra("CLIENTE_PARA_EDITAR", cliente);
         startActivity(intent);
     }
 
     @Override
     public void onDeleteClick(Cliente cliente) {
-        //... (o método onDeleteClick continua exatamente o mesmo)
         showDeleteConfirmationDialog(cliente);
     }
 
     private void showDeleteConfirmationDialog(final Cliente clienteParaExcluir) {
-        //... (seu método de exclusão continua o mesmo)
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.aviso_excluir, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

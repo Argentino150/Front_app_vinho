@@ -7,26 +7,27 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide; // Import da biblioteca de imagem
 import com.example.projeto_interdiciplinar.dto.Vinho;
+
 import java.util.List;
 import java.util.Locale;
 
 public class VinhosAdapter extends RecyclerView.Adapter<VinhosAdapter.VinhoViewHolder> {
 
-    // --- MUDANÇAS AQUI ---
     public interface OnItemClickListener {
         void onEditClick(Vinho vinho);
         void onDeleteClick(Vinho vinho);
     }
 
     private List<Vinho> vinhos;
-    private final OnItemClickListener listener; // Nosso "ouvinte"
+    private final OnItemClickListener listener;
 
     public VinhosAdapter(List<Vinho> vinhos, OnItemClickListener listener) {
         this.vinhos = vinhos;
         this.listener = listener;
     }
-    // --- FIM DAS MUDANÇAS ---
 
     @NonNull
     @Override
@@ -38,7 +39,7 @@ public class VinhosAdapter extends RecyclerView.Adapter<VinhosAdapter.VinhoViewH
     @Override
     public void onBindViewHolder(@NonNull VinhoViewHolder holder, int position) {
         Vinho vinho = vinhos.get(position);
-        holder.bind(vinho, listener); // Passa o vinho E o listener para o ViewHolder
+        holder.bind(vinho, listener);
     }
 
     @Override
@@ -51,12 +52,10 @@ public class VinhosAdapter extends RecyclerView.Adapter<VinhosAdapter.VinhoViewH
         notifyDataSetChanged();
     }
 
-    // --- NOVO MÉTODO PARA REMOVER ITEM ---
     public void removeItem(int position) {
         vinhos.remove(position);
         notifyItemRemoved(position);
     }
-
 
     static class VinhoViewHolder extends RecyclerView.ViewHolder {
         private TextView tvNome, tvTipo, tvSafra, tvPreco;
@@ -84,7 +83,18 @@ public class VinhosAdapter extends RecyclerView.Adapter<VinhosAdapter.VinhoViewH
                 tvPreco.setText("R$ --");
             }
 
-            // --- LÓGICA DE CLIQUE ATUALIZADA ---
+            // Lógica para carregar a imagem da URL
+            if (vinho.getImagemUrl() != null && !vinho.getImagemUrl().isEmpty()) {
+                Glide.with(itemView.getContext())
+                        .load(vinho.getImagemUrl()) // Pega a URL do vinho
+                        .placeholder(R.drawable.logo1) // Imagem temporária que aparece enquanto carrega
+                        .error(R.drawable.logo2) // Imagem que aparece se der erro ao carregar
+                        .into(ivImagem); // O ImageView onde a imagem vai aparecer
+            } else {
+                // Se não houver URL salva, mostra a sua imagem padrão
+                ivImagem.setImageResource(R.drawable.imagem);
+            }
+
             ivEditar.setOnClickListener(v -> listener.onEditClick(vinho));
             ivExcluir.setOnClickListener(v -> listener.onDeleteClick(vinho));
         }

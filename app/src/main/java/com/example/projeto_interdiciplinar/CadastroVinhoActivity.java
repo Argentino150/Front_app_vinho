@@ -23,7 +23,7 @@ import retrofit2.Response;
 public class CadastroVinhoActivity extends AppCompatActivity {
 
     // Componentes da UI
-    private EditText etNome, etSafra, etDescricao, etValor;
+    private EditText etNome, etSafra, etDescricao, etValor, etImagemUrl;
     private Spinner spinnerTipo;
     private Button btnSalvar, btnVoltar;
 
@@ -52,6 +52,7 @@ public class CadastroVinhoActivity extends AppCompatActivity {
         etValor = findViewById(R.id.et_valor);
         spinnerTipo = findViewById(R.id.spinner_tipo);
         btnSalvar = findViewById(R.id.btn_salvar);
+        etImagemUrl = findViewById(R.id.et_imagem_url); // <-- ADICIONE ESTA LINHA
     }
 
     private void setupSpinner() {
@@ -69,9 +70,10 @@ public class CadastroVinhoActivity extends AppCompatActivity {
         // 1. Coleta os dados dos campos
         String nome = etNome.getText().toString().trim();
         String safraStr = etSafra.getText().toString().trim();
-        String tipo = spinnerTipo.getSelectedItem().toString(); // Pega o valor do Spinner
+        String tipo = spinnerTipo.getSelectedItem().toString();
         String descricao = etDescricao.getText().toString().trim();
         String valorStr = etValor.getText().toString().trim();
+        String imagemUrl = etImagemUrl.getText().toString().trim(); // <-- Pega a URL da imagem
 
         // 2. Validação simples
         if (nome.isEmpty() || safraStr.isEmpty() || valorStr.isEmpty()) {
@@ -80,16 +82,14 @@ public class CadastroVinhoActivity extends AppCompatActivity {
         }
 
         // 3. Cria o objeto Vinho para enviar à API
-        // O endpoint de criar vinho espera um objeto Vinho, não um DTO.
         Vinho novoVinho = new Vinho();
         novoVinho.setNome(nome);
         novoVinho.setSafra(Integer.parseInt(safraStr));
         novoVinho.setTipo(tipo);
         novoVinho.setNotasDeDegustacao(descricao);
         novoVinho.setPrecoUnitario(new BigDecimal(valorStr));
-        // Campos não presentes na tela são enviados como nulos
         novoVinho.setHarmonizacoes(null);
-        novoVinho.setImagemUrl(null);
+        novoVinho.setImagemUrl(imagemUrl); // <-- Usa a URL da imagem aqui
 
         // 4. Faz a chamada para a API
         Call<Vinho> call = ApiClient.getApiService().createVinho(novoVinho);

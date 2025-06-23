@@ -5,22 +5,18 @@
     android:background="@color/white"
     android:padding="16dp">
 
-    <!-- Barra de busca -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp"
         android:gravity="center_vertical">
-
-        <!-- Botão Voltar -->
         <ImageView
             android:id="@+id/lista_voltar"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/lista_voltar"
             android:layout_marginEnd="8dp"/>
-
         <EditText
             android:id="@+id/et_busca_visitas"
             android:layout_width="0dp"
@@ -29,14 +25,12 @@
             android:hint="@string/buscar_visitas"
             android:background="@drawable/edit_text_bg"
             android:padding="8dp"/>
-
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/logo2"/>
     </LinearLayout>
 
-    <!-- Botão de adicionar visita -->
     <android.widget.Button
         android:id="@+id/btn_adicionar_visita"
         style="@style/ActionButton"
@@ -46,80 +40,20 @@
         android:layout_marginVertical="8dp"
         android:text="@string/nova_visita" />
 
-    <!-- Lista de Visitas -->
-    <LinearLayout
-        android:id="@+id/list_visitas"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:divider="@color/lightGray"
-        android:dividerHeight="8dp">
-
-        <!-- Item de Visita 1 -->
-        <LinearLayout
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_visitas"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        <ProgressBar
+            android:id="@+id/progress_bar_visitas"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            android:padding="8dp">
-
-            <!-- Detalhes da Visita -->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_nome_visita_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Visita ao Cliente X"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/tv_data_visita_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data: 25/06/2025"
-                    android:textColor="@color/black"/>
-
-                <!-- Endereço e número -->
-                <TextView
-                    android:id="@+id/tv_endereco_visita_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Endereço: Rua Exemplo, 123"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/tv_numero_visita_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Número: 001"
-                    android:textColor="@color/black"/>
-            </LinearLayout>
-
-            <!-- Ações de editar e excluir -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center">
-
-
-                <ImageView
-                    android:id="@+id/iv_excluir_1"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/excluir"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Adicionar mais itens de visita aqui seguindo o mesmo padrão -->
-
-    </LinearLayout>
-
+            android:layout_gravity="center"
+            android:visibility="visible"/>
+    </FrameLayout>
 </LinearLayout>

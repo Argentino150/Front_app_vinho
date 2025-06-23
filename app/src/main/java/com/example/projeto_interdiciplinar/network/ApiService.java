@@ -8,6 +8,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
+import java.util.List; // NOVO IMPORT
 
 public interface ApiService {
 
@@ -55,4 +56,21 @@ public interface ApiService {
 
     @DELETE("representantes/{id}")
     Call<Void> deleteRepresentante(@Path("id") Long id);
+
+    // --- RELATÓRIOS (NOVO ENDPOINT) ---
+    @GET("relatorios/vendas/por-regiao")
+    Call<List<VendasPorRegiaoDTO>> getVendasPorRegiao();
+
+    // --- VISITAS (NOVOS ENDPOINTS) ---
+    @GET("visitas")
+    Call<VisitaPage> getVisitas();
+
+    @POST("visitas")
+    Call<Visita> createVisita(@Body VisitaCadastroDTO visita);
+
+    @PUT("visitas/{id}")
+    Call<Visita> updateVisita(@Path("id") Long id, @Body VisitaCadastroDTO visita);
+
+    @DELETE("visitas/{id}")
+    Call<Void> deleteVisita(@Path("id") Long id);
 }
