@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <!-- Barra de busca -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,14 +12,12 @@
         android:padding="8dp"
         android:gravity="center_vertical">
 
-        <!-- Botão Voltar -->
         <ImageView
             android:id="@+id/lista_voltar"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/lista_voltar"
             android:layout_marginEnd="8dp"/>
-
 
         <EditText
             android:id="@+id/et_busca_vinho"
@@ -37,7 +34,6 @@
             android:src="@drawable/logo2"/>
     </LinearLayout>
 
-    <!-- Botão de adicionar vinho -->
     <android.widget.Button
         android:id="@+id/btn_adicionar_vinho"
         style="@style/ActionButton"
@@ -47,97 +43,20 @@
         android:layout_marginVertical="8dp"
         android:text="@string/adicionar_vinho" />
 
-    <!-- Lista de vinhos -->
-    <LinearLayout
-        android:id="@+id/list_vinhos"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:divider="@color/lightGray"
-        android:dividerHeight="8dp">
+        android:layout_weight="1">
 
-        <!-- Item de Vinho 1 -->
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_vinhos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            android:padding="8dp">
-
-            <!-- Imagem do Vinho -->
-            <ImageView
-                android:id="@+id/iv_imagem_vinho_1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/imagem"
-                android:scaleType="centerCrop"
-                android:layout_marginEnd="8dp"/>
-
-            <!-- Detalhes do Vinho -->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_nome_vinho_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vinho Francês Tinto Château De Sales"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/tv_safra_vinho_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hint_safra"
-                    android:textColor="@color/black"/>
-            </LinearLayout>
-
-            <!-- Preço do Vinho -->
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/tv_preco_vinho_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hint_valor"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
-
-                <!-- Botões para editar e excluir -->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
-
-                    <ImageView
-                        android:id="@+id/iv_editar_1"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/editar"
-                        android:layout_marginEnd="8dp"/>
-
-                    <ImageView
-                        android:id="@+id/iv_excluir_1"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/excluir"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:visibility="gone"/> <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"/> </FrameLayout>
 
 </LinearLayout>
